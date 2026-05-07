@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.99 0.002 142);
+  --foreground: oklch(0.13 0.01 142);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0.01 142);
+  --primary: oklch(0.18 0.01 142);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.96 0.005 142);
+  --secondary-foreground: oklch(0.18 0.01 142);
+  --muted: oklch(0.96 0.004 142);
+  --muted-foreground: oklch(0.52 0.01 142);
+  --accent: oklch(0.96 0.005 142);
+  --accent-foreground: oklch(0.18 0.01 142);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.90 0.006 142);
+  --input: oklch(0.90 0.006 142);
+  --ring: oklch(0.65 0.01 142);
+}
+
+.dark {
+  --background: oklch(0.13 0.005 142);
+  --foreground: oklch(0.97 0.003 142);
+  --card: oklch(0.18 0.005 142);
+  --card-foreground: oklch(0.97 0.003 142);
+  --primary: oklch(0.93 0.005 142);
+  --primary-foreground: oklch(0.18 0.005 142);
+  --secondary: oklch(0.24 0.005 142);
+  --secondary-foreground: oklch(0.97 0.003 142);
+  --muted: oklch(0.24 0.005 142);
+  --muted-foreground: oklch(0.65 0.007 142);
+  --accent: oklch(0.24 0.005 142);
+  --accent-foreground: oklch(0.97 0.003 142);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.50 0.01 142);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
